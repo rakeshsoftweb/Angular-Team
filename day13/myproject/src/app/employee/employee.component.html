@@ -1,0 +1,11 @@
+
+<!-- <h5>Employee Name : {{fullName}} </h5> -->
+<h5>Employee Name : {{fullName.firstName}} {{fullName.lastName}}</h5>
+<h5>Age : {{age}}</h5>
+
+<!-- property in angular  -->
+<input type="checkbox" [checked]="empStatus" />
+ <!-- <h5>Employee status : {{empStatus}}</h5> -->
+  <button class="btn btn-primary ml-3" (click)="onClickHandler()">Click</button>
+<h5>Skills : {{Skills[0]}} {{Skills[1]}} {{Skills[2]}}</h5>
+
