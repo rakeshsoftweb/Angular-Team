@@ -1,0 +1,21 @@
+<h5>
+    Stock Lookup Info:
+</h5>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sector Id </th>
+            <th>Sector Name </th>
+            <th>Sub Sector LookUp List </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stock of stockLookUpData">
+            <td>{{stock.sectorID}}</td>
+            <td>{{stock.sectorName}}</td>
+            <td>{{stock.subSectorLookUpList.length}}</td>
+        </tr>
+    </tbody>
+</table>

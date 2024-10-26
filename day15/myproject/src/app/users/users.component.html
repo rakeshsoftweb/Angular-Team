@@ -1,0 +1,24 @@
+<p>Users </p>
+
+<!-- <div *ngFor="let user of Users">
+    User Name : {{user}}
+</div> -->
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>User Id</th>
+            <th>Password</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of Users">
+            <td>{{user.id}}</td>
+            <td>{{user.userId}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.status}}</td>
+        </tr>
+    </tbody>
+</table>

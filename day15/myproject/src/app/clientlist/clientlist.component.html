@@ -1,0 +1,28 @@
+<h5>Client List</h5>
+{{msg}}
+<div *ngIf="deleteId>0">
+    <h5 class="text-danger">Are you sure to delete this entry</h5>
+        <button class="btn btn-danger mr-3" (click)="onDeleteYes()">Yes</button>
+        <button class="btn btn-info" (click)="onDeleteNo()">No</button>
+</div>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Client Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Phone</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let client of clientData">
+        <td>{{client.id}}</td>
+        <td>{{client.clientname}}</td>
+        <td>{{client.address}}</td>
+        <td>{{client.city}}</td>
+        <td>{{client.phone}}</td>
+        <td><button class="btn btn-danger" (click)="onDelete(client.id)">Delete</button></td>
+    </tr>
+</tbody>
+</table>

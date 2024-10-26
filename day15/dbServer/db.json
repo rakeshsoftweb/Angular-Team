@@ -1,0 +1,32 @@
+{
+  "client": [
+    {
+      "id": "1",
+      "clientname": "Rajesh Kumar",
+      "address": "Plot No 123",
+      "city": "New Delhi",
+      "phone": "123-123-123"
+    },
+    {
+      "id": "2",
+      "clientname": "Sriya Sharma",
+      "address": "Plot No 124",
+      "city": "Pune",
+      "phone": "123-123-124"
+    },
+    {
+      "id": "3",
+      "clientname": "John Smith",
+      "address": "Plot No 125",
+      "city": "New Delhi",
+      "phone": "123-123-126"
+    },
+    {
+      "id": "4",
+      "clientname": "Manish Kumar",
+      "address": "Plot No 126",
+      "city": "New Delhi",
+      "phone": "123-123-127"
+    }
+  ]
+}
