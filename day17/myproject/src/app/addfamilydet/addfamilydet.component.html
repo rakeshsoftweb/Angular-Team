@@ -1,0 +1,13 @@
+<h1>Family Detials</h1>
+<h5>Employee Name : {{EmpNameVal}}</h5>
+<h5>Employee Id : {{EmpIdVal}}</h5>
+
+<div>
+    <input type="text" #fmName class="form-control" />
+</div>
+<div>
+    <input type="text" #age class="form-control" />
+</div>
+
+
+<button (click)="onAddFM(fmName,age)" class="btn btn-primary">Add Family Member </button>

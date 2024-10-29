@@ -1,0 +1,36 @@
+<h5>Employee Details</h5>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>FM Details</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let employee of Employees">
+        <tr >
+            <td>{{employee.id}}</td>
+            <td>{{employee.empname}}</td>
+            <td>{{employee.designation}}</td>
+            <td><button (click)="onFMDetails(employee.id)">
+                <svg class="h-6 w-6 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="12" y1="5" x2="12" y2="19" />  <line x1="5" y1="12" x2="19" y2="12" /></svg>
+            </button></td>
+        </tr>
+       
+        <!-- <div *ngIf="selectEmpId == employee.id">
+            <tr *ngFor="let fm of employee.familyDet" >
+                <td colspan="2">{{fm.fmname}}</td>
+                <td colspan="2">{{fm.age}}</td>               
+            </tr>
+        </div> -->
+
+        <div *ngIf="selectEmpId == employee.id">
+            <div *ngFor="let fm of employee.familyDet" >
+                <span class="fmname">{{fm.fmname}}</span>
+                <span>{{fm.age}}</span>               
+            </div>
+        </div>
+       
+    </tbody>
+</table>

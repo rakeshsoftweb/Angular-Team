@@ -1,0 +1,11 @@
+<h1>Employee Detials</h1>
+<h5>Employee Id {{EmpId}}</h5>
+<h5>Employee Name {{EmpName}}</h5>
+
+<h5>FM added : {{EmpFMName}}</h5>
+<h5>FM Member Age : {{EmpFMAge}}</h5>
+
+<div>
+    <!-- <app-addfamilydet EmpNameProp="John"></app-addfamilydet> -->
+    <app-addfamilydet EmpNameProp={{EmpName}} EmpIdProp={{EmpId}} (eventFMName)="onFMNameUpdate($event)"></app-addfamilydet>
+</div>
