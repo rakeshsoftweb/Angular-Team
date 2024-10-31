@@ -1,0 +1,24 @@
+<p>Users </p>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users">
+                    <td>{{user.userId}}</td>
+                    <td><a [routerLink]="['/users/user/',user.id, user.userId]" [queryParams]="{userStatus:user.status}">Click</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <!-- child routing  -->
+        <router-outlet/>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<p>Book Order </p>
+<!-- <h5>{{textStr}}</h5>
+<h5>{{textStr | uppercase}}</h5>
+<h5>{{textStr | lowercase}}</h5>
+<h5>{{textStr | titlecase}}</h5>
+
+<h5>Bill Amount : {{billAmount }}</h5>
+<h5>Bill Amount in Rs : {{billAmount | currency :'INR' }}</h5>
+<h5>Bill Amount in Dollar : {{billAmount | currency :'USD' }}</h5>
+<h5>Bill Amount  : {{billAmount | currency :'EUR' }}</h5> -->
+
+<!-- <h5>Today Date : {{tDate}}</h5>
+<h5>Today Date : {{tDate | date :'dd-MM-yyyy'}}</h5>
+<h5>Today Date : {{tDate | date :'dd-MMM-yyyy'}}</h5>
+<h5>Today Date : {{tDate | date :'yy-dd-MM'}}</h5> -->
+<div class="form-group">
+    <label>Search</label>
+    <input type="text" class="form-control" [(ngModel)]="searchText"/>
+
+</div>
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Order No</th>
+        <th>Order Date</th>
+        <th>Client Name</th>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Status</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let order of ordersData | ordfilter :searchText ">
+        <td>{{order.orderNo}}</td>
+        <td>{{order.orderDate}}</td>
+        <td>{{order.clientname}}</td>
+        <td>{{order.product}}</td>
+        <td>{{order.qty}}</td>
+        <td>{{order.status | ordstatus}}</td>
+    </tr>
+</tbody>
+</table>

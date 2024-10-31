@@ -1,0 +1,51 @@
+<h5>Client List</h5>
+{{msg}}
+<div *ngIf="deleteId>0">
+    <h5 class="text-danger">Are you sure to delete this entry</h5>
+        <button class="btn btn-danger mr-3" (click)="onDeleteYes()">Yes</button>
+        <button class="btn btn-info" (click)="onDeleteNo()">No</button>
+</div>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Client Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Type</th>
+    </tr>
+</thead>
+<tbody *ngFor="let client of clientData">
+    <tr *ngIf="editId !== client.id">
+        <td>{{client.id}}</td>
+        <td>{{client.clientname}}</td>
+        <td>{{client.address}}</td>
+        <td>{{client.city}}</td>
+        <td>{{client.phone}}</td>
+        <td>
+            <!-- <span *ngIf="client.ctype ==='Direct'" class="bg-success text-white p-1">{{client.ctype}}</span>
+            <span *ngIf="client.ctype ==='Online'"class="bg-danger text-white p-1">{{client.ctype}}</span> -->
+            <span [ngClass]="{'bg-success':client.ctype ==='Online','bg-danger':client.ctype ==='Direct','text-white':true}">{{client.ctype}}</span>
+            
+        </td>
+        <td>
+            <button class="btn btn-info" (click)="onEdit(client)">Edit</button>
+            <button class="btn btn-danger" (click)="onDelete(client.id)">Delete</button>
+        </td>
+    </tr>
+    <tr *ngIf="editId === client.id">
+       
+        <td><input class="clientId" type="text" value={{client.id}} #clientid/></td>
+        <td><input class="clientName" type="text" value={{client.clientname}} #clientname/></td>
+        <td><input class="address" type="text" value={{client.address}} #address/></td>
+        <td><input class="city" type="text" value={{client.city}} #city/></td>
+        <td><input class="phone" type="text" value={{client.phone}} #phone/></td>
+       
+        <td>
+            <button class="btn btn-info" (click)="onUpdate(clientid,clientname,address,city, phone)">Update</button>
+            <button class="btn btn-danger" (click)="onDiscard()">Discard</button>
+        </td> 
+    </tr>
+</tbody>
+</table>
