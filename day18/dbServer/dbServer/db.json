@@ -1,0 +1,60 @@
+{
+  "client": [
+    {
+      "id": "1",
+      "clientname": "Rajesh Kumar",
+      "address": "Plot No 123",
+      "city": "New Delhi",
+      "phone": "123-123-123",
+      "ctype":"Online"
+    },
+    {
+      "id": "2",
+      "clientname": "Sriya Sharma",
+      "address": "Plot No 222",
+      "city": "Pune",
+      "phone": "123-123-124",
+      "ctype":"Direct"
+    },
+    {
+      "id": "3",
+      "clientname": "John Smith",
+      "address": "Plot No 333",
+      "city": "New Delhi",
+      "phone": "123-123-126",
+      "ctype":"Direct"
+    },
+    {
+      "id": "4",
+      "clientname": "Manish Kumar",
+      "address": "Plot No 126",
+      "city": "New Delhi",
+      "phone": "123-123-127",
+      "ctype":"Online"
+    },
+    {
+      "id": "5",
+      "clientname": "Raj",
+      "address": "Plot123",
+      "city": "New Delhi",
+      "phone": "1234567",
+      "ctype":"Online"
+    }
+  ],
+  "supplier":[
+    {
+      "id": "1",
+      "suppliername": "Rajesh Kumar",
+      "address": "Plot No 123",
+      "phone": "1234567",
+      "stype":"Online"
+    },
+    {
+      "id": "2",
+      "suppliername": "Rajesh Kumar",
+      "address": "Plot No 123",
+      "phone": "1234567",
+      "stype":"Online"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<!-- <h3 *ngIf="!productcreated" class="bg-warning">Please create Product</h3>
+<h3 *ngIf="productcreated" class="bg-success text-white">Product created successfully</h3>
+<button class="btn btn-primary" (click)="onCreateProduct()">Create</button> -->
+
+
+
+<!-- <h3 *ngIf="productcreated == false else msg2" class="bg-warning">Please create Product</h3>
+
+<ng-template #msg2>
+    <h3  class="bg-success text-white">Product created successfully</h3>
+</ng-template>
+
+<button class="btn btn-primary" (click)="onCreateProduct()">Create</button> -->
+
+
+
+<h3 *ngIf="productcreated == false then msg1 else msg2" class="bg-warning">This is my Default Text</h3>
+
+<ng-template #msg1>
+    <h3  class="bg-warning text-white">Please create product</h3>
+</ng-template>
+
+<ng-template #msg2>
+    <h3  class="bg-success text-white">Product created successfully</h3>
+</ng-template>
+
+<button class="btn btn-primary" *ngIf="!productcreated" (click)="onCreateProduct()">Create</button>
+
+
+<!-- <h3 >{{msgText}}</h3>
+
+<button class="btn btn-primary" (click)="onCreateProduct()">Create</button>  -->
+
+
+

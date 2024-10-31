@@ -1,0 +1,19 @@
+.clientId
+{
+    width: 40px;
+}
+.clientName {
+    width: 150px;
+}
+
+.address {
+    width: 250px;
+}
+
+.city {
+    width: 150px;
+}
+
+.phone {
+    width: 50px;
+}
