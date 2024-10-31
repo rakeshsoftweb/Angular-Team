@@ -1,0 +1,24 @@
+<h5>
+    Stock Price Info:
+</h5>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ticker Symbol </th>
+            <th>Trading Date </th>
+            <th>Open Price </th>
+            <th>Close Price</th>
+            <th>Volume </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stock of stockData">
+            <td>{{stock.tickerSymbol}}</td>
+            <td>{{stock.tradingDate[2]}}-{{stock.tradingDate[1]}}-{{stock.tradingDate[0]}}</td>
+            <td>{{stock.openPrice}}</td>
+            <td>{{stock.closePrice}}</td>
+            <td>{{stock.volume}}</td>
+        </tr>
+    </tbody>
+</table>
